@@ -16,7 +16,6 @@ import parking2 from "../assets/property-details/parking2.jpg";
 
 const FeaturesHome = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [animatedLetters, setAnimatedLetters] = useState([]);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -31,152 +30,68 @@ const FeaturesHome = () => {
     { title: "Secure Parking Space", image: parking2 },
   ];
 
-  // Animate letters when active slide changes
-  useEffect(() => {
-    const activeFeature = features[activeIndex];
-    if (!activeFeature) return;
-    
-    // Reset animation state
-    setAnimatedLetters([]);
-    
-    // Animate letters one by one
-    const letters = activeFeature.title.split('');
-    const timeoutIds = [];
-    
-    letters.forEach((letter, index) => {
-      const timeoutId = setTimeout(() => {
-        setAnimatedLetters(prev => [...prev, { letter, id: `${activeIndex}-${index}` }]);
-      }, index * 60); // Delay each letter by 60ms
-      
-      timeoutIds.push(timeoutId);
-    });
-    
-    return () => timeoutIds.forEach(id => clearTimeout(id));
-  }, [activeIndex]);
-
   return (
-    <section className="bg-gradient-to-b from-gray-900 to-black py-24 px-4 md:px-12" data-aos="fade-up">
-      <style jsx>{`
-        @keyframes letterFall {
-          0% {
-            opacity: 0;
-            transform: translateY(-15px) rotate(-5deg);
-          }
-          70% {
-            opacity: 1;
-            transform: translateY(5px) rotate(2deg);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0) rotate(0);
-          }
+    <section className="bg-black py-20 px-4 md:px-12" data-aos="fade-up">
+      {/* Custom animation style */}
+      <style>{`
+        @keyframes fadeInUp {
+          0% { opacity: 0; transform: translateY(20px); }
+          100% { opacity: 1; transform: translateY(0); }
         }
-        
-        .letter-animation {
-          display: inline-block;
-          opacity: 0;
-          animation: letterFall 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        .fade-in-up {
+          animation: fadeInUp 0.6s ease-out forwards;
         }
-        
-        .swiper-pagination-bullet {
-          width: 10px;
-          height: 10px;
-          background: rgba(255, 255, 255, 0.3);
-          opacity: 1;
-          transition: all 0.3s ease;
-        }
-        
-        .swiper-pagination-bullet-active {
-          background: white;
-          width: 30px;
-          border-radius: 8px;
-        }
-        
-        .image-gradient::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 70%;
-          background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, transparent 100%);
-        }
-        
-        .swiper-slide {
-          transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        
-        .swiper-slide-active {
-          transform: scale(1.03);
-          z-index: 2;
-        }
-        
-        .swiper-slide:not(.swiper-slide-active) {
-          opacity: 0.7;
+        .text-overlay {
+          background: rgba(0, 0, 0, 0.6);
+          padding: 12px 20px;
+          border-radius: 12px;
+          text-shadow: 1px 1px 8px rgba(0,0,0,0.9);
         }
       `}</style>
 
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-            Our <span className="font-medium bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">Premium</span> Services
-          </h2>
-          <div className="w-24 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto"></div>
-        </div>
+      <h2 className="text-4xl text-white font-mono text-center mb-12">
+        Our Main Services
+      </h2>
 
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          slidesPerView={1.2}
-          spaceBetween={30}
-          centeredSlides={true}
-          loop={true}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-          pagination={{ 
-            clickable: true,
-            renderBullet: (index, className) => {
-              return `<span class="${className}"></span>`;
-            }
-          }}
-          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          breakpoints={{
-            640: { slidesPerView: 1.3 },
-            768: { slidesPerView: 1.5 },
-            1024: { slidesPerView: 1.7 },
-          }}
-          className="pb-16"
-        >
-          {features.map((feature, index) => (
-            <SwiperSlide key={index}>
-              <div className="relative h-[500px] w-full rounded-[2rem] overflow-hidden shadow-2xl transform transition-all duration-700">
-                <div className="image-gradient">
-                  <img
-                    src={feature.image}
-                    alt={feature.title}
-                    className="w-full h-full object-cover transition-transform duration-1000 ease-out hover:scale-105"
-                  />
+      <Swiper
+        modules={[Pagination, Autoplay]}
+        slidesPerView={1.2}
+        spaceBetween={20}
+        centeredSlides={true}
+        loop={true}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        breakpoints={{
+          768: { slidesPerView: 1.4 },
+          1024: { slidesPerView: 1.6 },
+        }}
+        className="pb-10"
+      >
+        {features.map((feature, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl group transition-all duration-300 hover:scale-[1.02]">
+              <img
+                src={feature.image}
+                alt={feature.title}
+                className="w-full h-full object-cover"
+              />
+
+              {/* Overlay gradient for better contrast */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+
+              {/* Title with background only on active slide */}
+              {index === activeIndex && (
+                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center fade-in-up">
+                  <p className="text-white text-xl md:text-3xl font-semibold text-overlay">
+                    {feature.title}
+                  </p>
                 </div>
-
-                {/* Animated title */}
-                {index === activeIndex && (
-                  <div className="absolute bottom-8 left-0 right-0 text-center px-4">
-                    <div className="inline-flex flex-wrap justify-center max-w-2xl mx-auto">
-                      {animatedLetters.map(({ letter, id }, idx) => (
-                        <span 
-                          key={id}
-                          className="letter-animation text-white text-2xl md:text-4xl font-medium mx-0.5"
-                          style={{ animationDelay: `${idx * 0.05}s` }}
-                        >
-                          {letter === ' ' ? '\u00A0' : letter}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+              )}
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };

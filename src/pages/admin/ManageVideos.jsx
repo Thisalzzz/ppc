@@ -16,6 +16,8 @@ const AdminUploadTestimonial = () => {
   const [videos, setVideos] = useState([]);
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
+  const [description, setDescription] = useState("");
+
   const db = getFirestore();
 
   const fetchVideos = async () => {
@@ -32,6 +34,7 @@ const AdminUploadTestimonial = () => {
     if (!video) return alert("Please select a video first.");
     if (!name.trim()) return alert("Please enter the person's name.");
     if (!company.trim()) return alert("Please enter the company name.");
+    if (!description.trim()) return alert("Please enter a description.");
 
     setUploading(true);
 
@@ -50,6 +53,7 @@ const AdminUploadTestimonial = () => {
         url: videoUrl,
         name: name.trim(),
         company: company.trim(),
+        description: description.trim(),
         createdAt: serverTimestamp(),
       });
 
@@ -57,6 +61,7 @@ const AdminUploadTestimonial = () => {
       setVideo(null);
       setName("");
       setCompany("");
+      setDescription("");
       fetchVideos();
     } catch (err) {
       console.error(err);
@@ -107,6 +112,16 @@ const AdminUploadTestimonial = () => {
               placeholder="Acme Inc."
             />
           </div>
+          <div className="md:col-span-2">
+            <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
+            <textarea
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Write a short testimonial quote or summary..."
+              rows={3}
+            />
+          </div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-4 items-center">
@@ -126,7 +141,7 @@ const AdminUploadTestimonial = () => {
           </div>
           <button
             onClick={handleUpload}
-            disabled={uploading || !video || !name.trim() || !company.trim()}
+            disabled={uploading || !video || !name.trim() || !company.trim() || !description.trim()}
             className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed mt-auto"
           >
             {uploading ? (
@@ -154,7 +169,8 @@ const AdminUploadTestimonial = () => {
               <video src={vid.url} controls className="w-full h-48 object-cover" />
               <div className="p-4">
                 <h4 className="font-medium text-gray-900">{vid.name}</h4>
-                <p className="text-sm text-gray-600 mb-3">{vid.company}</p>
+                <p className="text-sm text-gray-600 mb-1">{vid.company}</p>
+                <p className="text-gray-700 text-sm italic mb-3">{vid.description}</p>
                 <button
                   onClick={() => handleDelete(vid.id)}
                   className="text-sm text-red-600 hover:text-red-800 hover:underline"

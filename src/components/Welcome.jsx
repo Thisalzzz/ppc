@@ -1,12 +1,15 @@
 import React from 'react';
-import furnished from "../assets/property-details/furnished.jpg"
+import furnished from "../assets/property-details/furnished.jpg";
 
 const AboutWorkClub = () => {
   return (
     <section className="bg-[#111111] text-white py-20 px-4 md:px-16">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+      <div
+        className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12"
+        data-aos="fade-up"
+      >
         {/* Text Content */}
-        <div className="md:w-1/2">
+        <div className="md:w-1/2" data-aos="fade-right" data-aos-delay="200">
           <h2 className="text-4xl md:text-5xl font-serif font-semibold leading-tight mb-6">
             Welcome to Paradise Properties Ceylon.
           </h2>
@@ -19,14 +22,17 @@ const AboutWorkClub = () => {
         </div>
 
         {/* Image */}
-<div className="md:w-1/2 w-full flex justify-center">
-  <img
-    src={furnished}
-    alt="Workplace"
-    className="rounded-2xl shadow-lg object-cover w-[90%] h-[300px] md:h-[400px]"
-  />
-</div>
-
+        <div
+          className="md:w-1/2 w-full flex justify-center"
+          data-aos="fade-left"
+          data-aos-delay="400"
+        >
+          <img
+            src={furnished}
+            alt="Workplace"
+            className="rounded-2xl shadow-lg object-cover w-[90%] h-[300px] md:h-[400px]"
+          />
+        </div>
       </div>
     </section>
   );

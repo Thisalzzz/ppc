@@ -68,7 +68,7 @@ const PropertyDetails = () => {
     { 
       img: meetingImg, 
       tag: "MEETING SPACES", 
-      title: "Executive Meeting Rooms", 
+      title: "Smart Boardroom Facility", 
       desc: "Private, soundproof rooms for calls & presentations" 
     },
     { 

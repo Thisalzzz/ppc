@@ -8,11 +8,11 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 // Images
 import meetingImg from "../assets/property-details/meeting.jpg";
-import meetingImg2 from "../assets/property-details/meeting2.jpg";
 import furnishedImg from "../assets/property-details/furnished.jpg";
 import furnished2 from "../assets/hero/1.jpg";
 import lobby from "../assets/property-details/lobby.jpg";
 import parking2 from "../assets/property-details/parking2.jpg";
+import unfurnished from "../assets/luxe/unfurnished.jpg"
 
 const FeaturesHome = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -23,7 +23,7 @@ const FeaturesHome = () => {
 
   const features = [
     { title: "Dedicated Meeting Rooms", image: meetingImg },
-    { title: "Unfurnished Offices", image: meetingImg2 },
+    { title: "Customizable Offices", image: unfurnished },
     { title: "Fully Furnished Offices", image: furnishedImg },
     { title: "Private 2 seaters", image: furnished2 },
     { title: "Elegant Client Lobby", image: lobby },

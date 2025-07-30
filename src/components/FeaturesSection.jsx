@@ -12,13 +12,12 @@ const FeaturesSection = () => {
     { icon: <FaUserTie size={30} />, title: "Private Offices", color: "from-yellow-400 to-yellow-600" },
     { icon: <FaUsers size={30} />, title: "Shared Workspace", color: "from-blue-400 to-blue-600" },
     { icon: <FaChair size={30} />, title: "Hot Desks", color: "from-green-400 to-green-600" },
-    { icon: <FaParking size={30} />, title: "Parking", color: "from-purple-400 to-purple-600" },
-    { icon: <FaUtensils size={30} />, title: "Pantry Area for Dining", color: "from-red-400 to-red-600" },
-    { icon: <FaDoorClosed size={30} />, title: "Fully Equipped Kitchen", color: "from-pink-400 to-pink-600" },
+    { icon: <FaParking size={30} />, title: "Dedicated Parking", color: "from-purple-400 to-purple-600" },
+    { icon: <FaUtensils size={30} />, title: "Fully Equiped Pantry Area", color: "from-red-400 to-red-600" },
     { icon: <FaWifi size={30} />, title: "High Speed Wi-Fi", color: "from-indigo-400 to-indigo-600" },
-    { icon: <FaBriefcase size={30} />, title: "Meeting Room", color: "from-teal-400 to-teal-600" },
+    { icon: <FaBriefcase size={30} />, title: "Complementary Meeting Room", color: "from-teal-400 to-teal-600" },
     { icon: <FaHandsHelping size={30} />, title: "Lobby for Clients", color: "from-orange-400 to-orange-600" },
-    { icon: <FaShieldAlt size={30} />, title: "Security", color: "from-cyan-400 to-cyan-600" },
+    { icon: <FaShieldAlt size={30} />, title: "Security (CCTV & Finger print)", color: "from-cyan-400 to-cyan-600" },
     { icon: <FaClock size={30} />, title: "24/7 Access to Office", color: "from-lime-400 to-lime-600" },
   ];
 

@@ -15,6 +15,7 @@ import AdminPostJob from "./pages/admin/AddJob"
 import Apply from './pages/job/JobApplication';
 import ViewJobApplications from "./pages/admin/ViewApplication"
 import AdminJobsPage from './pages/admin/AdminJobsPage';
+import AboutUs from "./pages/AboutUs"
 
 export default function App() {
   return (
@@ -30,11 +31,13 @@ export default function App() {
       <Route path="/property/ceylon" element={<PropertyDetails />} />
       <Route path="/property/luxe" element={<PropertyLuxeDetails />} />
       <Route path="/manage-testimonials" element={<AdminUploadTestimonial />} />
-      <Route path="/inquiry" element={<InquiryForm />} />
+      <Route path="/contact" element={<InquiryForm />} />
       <Route path="/admin/post-job" element={<AdminPostJob />} />
       <Route path="/careers/apply" element={<Apply />} />    
       <Route path="/admin/view-applications" element={<ViewJobApplications />} />  
       <Route path="/admin/view-openings" element={<AdminJobsPage />} />
+      <Route path="/about-us" element={<AboutUs />} />
+
     </Routes>
     <WhatsAppButton/>
     </>

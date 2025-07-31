@@ -34,7 +34,7 @@ const TrustedBy = () => {
               <img
                 src={logo}
                 alt={`Partner ${index + 1}`}
-                className="h-16 w-auto mx-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                className="h-16 w-auto mx-auto object-contain  hover:grayscale-0 transition duration-300"
               />
             </div>
           ))}

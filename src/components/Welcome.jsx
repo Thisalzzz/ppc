@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import furnished from "../assets/property-details/furnished.jpg";
 
 const AboutWorkClub = () => {
+  const navigate = useNavigate();
   return (
     <section className="bg-[#111111] text-white py-20 px-4 md:px-16">
       <div
@@ -16,7 +18,9 @@ const AboutWorkClub = () => {
           <p className="text-lg text-gray-300 leading-relaxed mb-8">
             Our workspaces across Colombo and other prime locations in Sri Lanka redefine what work can mean for entrepreneurs and growing businesses. At PPC, workspaces are elevated, service is premium, design is curated, and community is empowered. From refined coworking zones to customized event and meeting experiences — step into a new era of professional environments.
           </p>
-          <button className="bg-[#e6d5c3] text-black rounded-full px-6 py-3 hover:scale-105 transition-transform">
+          <button className="bg-[#e6d5c3] text-black rounded-full px-6 py-3 hover:scale-105 transition-transform cursor-pointer"
+            onClick={() => navigate("/contact")}
+          >
             Inquire
           </button>
         </div>

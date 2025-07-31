@@ -1,16 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import one from "../assets/hero/1.jpg";
-import two from "../assets/hero/2.jpg";
-import three from "../assets/hero/3.jpg";
-import four from "../assets/hero/4.jpg";
+import two from "../assets/properties/rajagiriya.jpg";
+import three from "../assets/property-details/furnished.jpg";
+import four from "../assets/luxe/meeting3.jpg";
+import five from "../assets/property-details/lobby.jpg";
 
-const images = [one, two, three, four];
+const images = [one, two, three, four, five];
 const descriptions = [
   "Affordable luxury offices and hot desks",
   "Premium spaces with stunning views",
   "Flexible workspace for remote teams",
-  "Modern interiors designed for focus"
+  "Modern interiors designed for focus",
+  "Elegant client lobby and reception area"
 ];
 
 const HeroSlider = () => {
@@ -123,8 +125,8 @@ const HeroSlider = () => {
             data-aos-delay="300"
           >
             <button
-              onClick={() => navigate("/inquiry")}
-              className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-8 py-3.5 rounded-full shadow-xl transition-all transform hover:-translate-y-0.5 font-medium flex items-center"
+              onClick={() => navigate("/contact")}
+              className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-8 py-3.5 rounded-full shadow-xl transition-all transform hover:-translate-y-0.5 font-medium flex items-center cursor-pointer"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -132,7 +134,7 @@ const HeroSlider = () => {
               Book Now
             </button>
             
-            <button className="bg-transparent border-2 border-white/30 hover:border-white/50 text-white px-8 py-3.5 rounded-full shadow-xl transition-all flex items-center">
+            <button className="bg-transparent border-2 border-white/30 hover:border-white/50 text-white px-8 py-3.5 rounded-full shadow-xl transition-all flex items-center cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
               </svg>

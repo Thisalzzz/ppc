@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-scroll";
+import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import Navbar from "../../components/Navbar";
 import FeaturesSection from "../../components/FeaturesSection";
+import Footer from "../../components/Footer";
 
 // Image imports
 import victorianImg from "../../assets/property-details/victorian.jpg";
@@ -138,12 +140,14 @@ const PropertyDetails = () => {
         </p>
         
         <div className="mt-10 flex flex-wrap justify-center gap-6">
-          <button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-8 py-4 text-lg rounded-full shadow-xl transition-all transform hover:-translate-y-1 hover:shadow-2xl flex items-center gap-2 group">
+        <Link to="/contact" className="inline-block">
+          <button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-8 py-4 text-lg rounded-full shadow-xl transition-all transform hover:-translate-y-1 hover:shadow-2xl flex items-center gap-2 group cursor-pointer">
             <span>Schedule Tour</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
           </button>
+        </Link>
           
           <button className="bg-transparent border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 text-lg rounded-full shadow-xl transition-all flex items-center gap-2 group">
             <span>Download Brochure</span>
@@ -155,20 +159,28 @@ const PropertyDetails = () => {
       </div>
       
       {/* Modern scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <Link to="next-section" smooth={true} duration={800}>
-          <div className="flex flex-col items-center">
-            <span className="text-sm text-white/80 mb-2 tracking-wider animate-pulse">SCROLL TO EXPLORE</span>
-            <div className="relative w-10 h-16">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-0.5 h-10 bg-white/40 rounded-full relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-full h-8 bg-white rounded-full animate-scroll"></div>
+            <ScrollLink
+              to="map"
+              smooth={true}
+              duration={800}
+              offset={-60} // optional: adjust if you have fixed headers
+            >
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 cursor-pointer">
+                <div className="flex flex-col items-center">
+                  <span className="text-sm text-white/80 mb-2 tracking-wider animate-pulse">
+                    SCROLL TO EXPLORE
+                  </span>
+                  <div className="relative w-10 h-16">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-0.5 h-10 bg-white/40 rounded-full relative overflow-hidden">
+                        <div className="absolute top-0 left-0 w-full h-8 bg-white rounded-full animate-scroll"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </Link>
-      </div>
+            </ScrollLink>
+
       
       {/* Floating particles for added visual interest */}
       {[...Array(15)].map((_, i) => (
@@ -283,9 +295,11 @@ const PropertyDetails = () => {
               <p className="text-lg text-gray-300 leading-relaxed mb-8">
                 Our workspaces across Colombo and other prime locations in Sri Lanka redefine what work can mean for entrepreneurs and growing businesses. At PPC, workspaces are elevated, service is premium, design is curated, and community is empowered. From refined coworking zones to customized event and meeting experiences — step into a new era of professional environments.
               </p>
+              <Link to="/contact" className="inline-block">
               <button className="bg-[#e6d5c3] text-black rounded-full px-6 py-3 hover:scale-105 transition-transform">
                 Inquire
               </button>
+              </Link>
             </div>
     
             {/* Image */}
@@ -321,9 +335,6 @@ const PropertyDetails = () => {
         <p className="text-lg text-gray-300 leading-relaxed mb-8">
           At Paradise Properties Ceylon, we craft more than just offices — we create experiences. Whether you're a startup, a growing business, or a solo entrepreneur, our thoughtfully designed spaces across Sri Lanka provide the perfect balance of comfort, creativity, and professionalism. It's more than a place to work — it's where your best ideas come to life.
         </p>
-        <button className="bg-[#e6d5c3] text-black rounded-full px-6 py-3 hover:scale-105 transition-transform">
-          Inquire
-        </button>
       </div>
 
     </div>
@@ -389,29 +400,6 @@ const PropertyDetails = () => {
             </svg>
           </button>
 
-          {/* Play/Pause */}
-          <button
-            onClick={toggleAutoPlay}
-            className={`absolute top-4 right-4 z-10 text-white px-4 py-2 rounded-lg ${
-              isAutoPlaying ? "bg-black/40 hover:bg-red-500/90" : "bg-black/40 hover:bg-green-500/90"
-            } transition-all backdrop-blur-sm flex items-center`}
-          >
-            {isAutoPlaying ? (
-              <>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
-                </svg>
-                Pause
-              </>
-            ) : (
-              <>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                </svg>
-                Play
-              </>
-            )}
-          </button>
 
           {/* Image */}
           <img
@@ -423,7 +411,6 @@ const PropertyDetails = () => {
           <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent text-white">
             <div className="flex justify-between items-end">
               <div>
-                <div className="text-sm text-gray-300 mb-1">Image {currentImageIndex + 1} of {images.length}</div>
                 <div className="text-xl font-medium">{images[currentImageIndex].alt}</div>
               </div>
               <div className="flex space-x-2">
@@ -545,16 +532,16 @@ const PropertyDetails = () => {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
             Schedule a private tour and discover how our luxury spaces can elevate your business
           </p>
-          <button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-10 py-4 text-lg rounded-full shadow-xl transition-all transform hover:-translate-y-1 font-medium">
+          <Link to="/contact" className="inline-block ">
+          <button className=" cursor-pointer bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-10 py-4 text-lg rounded-full shadow-xl transition-all transform hover:-translate-y-1 font-medium">
             Book Your Private Tour
           </button>
+          </Link>
         </div>
       </section>
 
-      <footer className="bg-[#090909] py-6 text-center text-gray-500">
-          © 2025 Paradise Properties Ceylon. All rights reserved.
-      </footer>
-
+      {/* Footer */}
+      <Footer />  
     </div>
   );
 };

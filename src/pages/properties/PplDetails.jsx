@@ -2,19 +2,21 @@ import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from 'react-router-dom'
 import Navbar from "../../components/Navbar";
 import FeaturesSection from "../../components/FeaturesSection";
+import Footer from "../../components/Footer";
 
 // Image imports
-import victorianImg from "../../assets/property-details/victorian.jpg";
-import parkingImg from "../../assets/property-details/parking.jpg";
+import victorianImg from "../../assets/property-details/lobby2.jpg";
+import parkingImg from "../../assets/luxe/parking.jpg";
 import amenitiesImg from "../../assets/property-details/amenities.jpg";
-import meetingImg from "../../assets/property-details/meeting.jpg";
-import koiPondImg from "../../assets/property-details/koi-pond.jpg";
+import meetingImg from "../../assets/luxe/meeting3.jpg";
 import aristocraticImg from "../../assets/luxe/lobby2.jpg";
 import unfurnishedImg from "../../assets/luxe/unfurnished.jpg";
 import luxe from "../../assets/properties/luxe.jpg";
-import lobby from "../../assets/property-details/lobby.jpg";
+import lobby3 from "../../assets/luxe/lobby3.jpg";
+import seater2 from "../../assets/luxe/2seater.jpg";
 
 const PropertyDetails = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -38,11 +40,11 @@ const PropertyDetails = () => {
   const images = [
     { src: victorianImg, alt: "Victorian Common Spaces" },
     { src: parkingImg, alt: "Ample Parking with Security" },
-    { src: amenitiesImg, alt: "Upgraded Common Amenities" },
     { src: meetingImg, alt: "Complimentary Meeting Spaces" },
-    { src: koiPondImg, alt: "Koi Pond" },
     { src: aristocraticImg, alt: "Tranquil Aristocratic Theme" },
     { src: unfurnishedImg, alt: "Furnished and Unfurnished Options" },
+     { src: lobby3, alt: "Elegant lobby for your clients and visitors" },
+     { src: seater2, alt: "Cozy 2 seater cabins" },
   ];
 
   const goToPrevious = () => {
@@ -71,11 +73,11 @@ const PropertyDetails = () => {
     { 
       img: unfurnishedImg, 
       tag: "OFFICE SUITES", 
-      title: "Furnished Offices", 
-      desc: "Fully equipped 7-seater offices for teams" 
+      title: "Customizable Ofices", 
+      desc: "Fully customizable offices for you to customize on your own way" 
     },
     { 
-      img: lobby, 
+      img: lobby3, 
       tag: "RECEPTION", 
       title: "Client Lobby", 
       desc: "Elegant Victorian-style reception to impress visitors" 
@@ -251,29 +253,6 @@ const PropertyDetails = () => {
             </svg>
           </button>
 
-          {/* Play/Pause */}
-          <button
-            onClick={toggleAutoPlay}
-            className={`absolute top-4 right-4 z-10 text-white px-4 py-2 rounded-lg ${
-              isAutoPlaying ? "bg-black/40 hover:bg-red-500/90" : "bg-black/40 hover:bg-green-500/90"
-            } transition-all backdrop-blur-sm flex items-center`}
-          >
-            {isAutoPlaying ? (
-              <>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
-                </svg>
-                Pause
-              </>
-            ) : (
-              <>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                </svg>
-                Play
-              </>
-            )}
-          </button>
 
           {/* Image */}
           <img
@@ -285,7 +264,6 @@ const PropertyDetails = () => {
           <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent text-white">
             <div className="flex justify-between items-end">
               <div>
-                <div className="text-sm text-gray-300 mb-1">Image {currentImageIndex + 1} of {images.length}</div>
                 <div className="text-xl font-medium">{images[currentImageIndex].alt}</div>
               </div>
               <div className="flex space-x-2">
@@ -407,11 +385,14 @@ const PropertyDetails = () => {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
             Schedule a private tour and discover how our luxury spaces can elevate your business
           </p>
-          <button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-10 py-4 text-lg rounded-full shadow-xl transition-all transform hover:-translate-y-1 font-medium">
+          <RouterLink to="/contact" className="inline-block mb-4">
+          <button className=" cursor-pointer bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-10 py-4 text-lg rounded-full shadow-xl transition-all transform hover:-translate-y-1 font-medium">
             Book Your Private Tour
           </button>
+          </RouterLink>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

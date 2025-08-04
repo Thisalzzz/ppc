@@ -24,7 +24,7 @@ const TrustedBy = () => {
         <p className="text-gray-50 mb-10">
           Our platform is supported and trusted by leading businesses.
         </p>
-
+    
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center">
           {logos.map((logo, index) => (
             <div

@@ -13,6 +13,7 @@ import furnished2 from "../assets/hero/1.jpg";
 import lobby from "../assets/property-details/lobby.jpg";
 import parking2 from "../assets/property-details/parking2.jpg";
 import unfurnished from "../assets/luxe/unfurnished.jpg"
+import meeting3 from "../assets/luxe/meeting3.jpg"
 
 const FeaturesHome = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -23,6 +24,7 @@ const FeaturesHome = () => {
 
   const features = [
     { title: "Dedicated Meeting Rooms", image: meetingImg },
+    { title: "7 Seater Meeting space", image: meeting3 },
     { title: "Customizable Offices", image: unfurnished },
     { title: "Fully Furnished Offices", image: furnishedImg },
     { title: "Private 2 seaters", image: furnished2 },
@@ -31,7 +33,7 @@ const FeaturesHome = () => {
   ];
 
   return (
-    <section className="bg-black py-20 px-4 md:px-12" data-aos="fade-up">
+    <section className="bg-gradient-to-b from-gray-800 to-black py-20 px-4 md:px-12" data-aos="fade-up">
       {/* Custom animation style */}
       <style>{`
         @keyframes fadeInUp {

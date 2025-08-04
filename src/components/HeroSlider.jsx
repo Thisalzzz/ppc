@@ -54,8 +54,6 @@ const HeroSlider = () => {
   return (
     <div 
       className="relative min-h-screen h-[90vh] w-full overflow-hidden"
-      onMouseEnter={() => setIsPlaying(false)}
-      onMouseLeave={() => setIsPlaying(true)}
     >
       {/* Background Images with Parallax Effect */}
       <div className="absolute inset-0 overflow-hidden">

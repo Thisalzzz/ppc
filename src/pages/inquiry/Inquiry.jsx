@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import { db } from "../../firebase/config";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer"
 
 const properties = [
   "Paradise Properties Ceylon – Rajagiriya",
@@ -236,11 +237,10 @@ const InquiryForm = () => {
           </div>
         </div>
 
-        {/* Branding */}
-        <div className="mt-6 text-center text-gray-100 text-sm">
-          <p>© {new Date().getFullYear()} Paradise Properties. All rights reserved.</p>
-        </div>
+
       </div>
+              {/* footer */}
+          <Footer/>
     </div>
   );
 };

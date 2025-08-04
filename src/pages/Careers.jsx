@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import JobCard from '../components/careers/JobCard';
 import { db, getDocs, collection } from '../firebase/config';
 import Navbar from '../components/Navbar';
+import Footer from "../components/Footer"
 
 const Careers = () => {
   const [jobs, setJobs] = useState([]);
@@ -33,6 +34,7 @@ const Careers = () => {
   );
 
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 pb-16">
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-24">
@@ -68,6 +70,8 @@ const Careers = () => {
         )}
       </div>
     </div>
+      <Footer />
+     </>
   );
 };
 

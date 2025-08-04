@@ -56,7 +56,7 @@ const FeaturesSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-gray-900 to-black text-white py-20 px-4">
+    <section className="bg-gradient-to-b from-gray-800 to-black text-white py-20 px-4">
       <div className="max-w-7xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

@@ -32,7 +32,7 @@ const Navbar = () => {
         <div
           className={`flex-shrink-0 cursor-pointer transform transition-all duration-700 ease-out ${
             logoDropped ? "translate-y-0 opacity-100" : "-translate-y-6 opacity-0"
-          } hover:scale-105`}
+          } hover:scale-115`}
           onClick={() => navigate("/")}
         >
           <div className="relative">

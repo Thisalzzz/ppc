@@ -181,7 +181,7 @@ const PropertyDetails = () => {
             </ul>
             {card.button && (
               <Link
-                to={card.button.link}
+                to={card.button.link || card.button.id}
                 smooth={true}
                 duration={500}
                 className={`inline-block px-5 py-2.5 text-white bg-${card.button.color}-600 hover:bg-${card.button.color}-700 rounded-lg transition-all font-medium`}

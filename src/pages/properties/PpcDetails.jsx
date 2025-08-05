@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import Navbar from "../../components/Navbar";
 import FeaturesSection from "../../components/FeaturesSection";
@@ -140,14 +140,14 @@ const PropertyDetails = () => {
         </p>
         
         <div className="mt-10 flex flex-wrap justify-center gap-6">
-        <Link to="/contact" className="inline-block">
+        <RouterLink to="/contact" className="inline-block">
           <button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-8 py-4 text-lg rounded-full shadow-xl transition-all transform hover:-translate-y-1 hover:shadow-2xl flex items-center gap-2 group cursor-pointer">
             <span>Schedule Tour</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
           </button>
-        </Link>
+        </RouterLink>
           
           <button className="bg-transparent border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 text-lg rounded-full shadow-xl transition-all flex items-center gap-2 group">
             <span>Download Brochure</span>
@@ -271,14 +271,14 @@ const PropertyDetails = () => {
               ))}
             </ul>
             {card.button && (
-              <Link
+              <ScrollLink
                 to={card.button.link}
                 smooth={true}
                 duration={500}
                 className={`inline-block px-5 py-2.5 text-white bg-${card.button.color}-600 hover:bg-${card.button.color}-700 rounded-lg transition-all font-medium`}
               >
                 {card.button.label}
-              </Link>
+              </ScrollLink>
             )}
           </div>
         ))}
@@ -295,11 +295,11 @@ const PropertyDetails = () => {
               <p className="text-lg text-gray-300 leading-relaxed mb-8">
                 Our workspaces across Colombo and other prime locations in Sri Lanka redefine what work can mean for entrepreneurs and growing businesses. At PPC, workspaces are elevated, service is premium, design is curated, and community is empowered. From refined coworking zones to customized event and meeting experiences — step into a new era of professional environments.
               </p>
-              <Link to="/contact" className="inline-block">
+              <RouterLink to="/contact" className="inline-block">
               <button className="bg-[#e6d5c3] text-black rounded-full px-6 py-3 hover:scale-105 transition-transform">
                 Inquire
               </button>
-              </Link>
+              </RouterLink>
             </div>
     
             {/* Image */}
@@ -532,11 +532,11 @@ const PropertyDetails = () => {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
             Schedule a private tour and discover how our luxury spaces can elevate your business
           </p>
-          <Link to="/contact" className="inline-block ">
+          <RouterLink to="/contact" className="inline-block ">
           <button className=" cursor-pointer bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-10 py-4 text-lg rounded-full shadow-xl transition-all transform hover:-translate-y-1 font-medium">
             Book Your Private Tour
           </button>
-          </Link>
+          </RouterLink>
         </div>
       </section>
 

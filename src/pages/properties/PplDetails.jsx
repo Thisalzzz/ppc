@@ -193,6 +193,62 @@ const PropertyDetails = () => {
         ))}
       </section>
 
+                  {/* About Section */}
+            <section className="bg-[#111111] text-white py-20 px-4 md:px-16">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                  {/* Text Content */}
+                  <div className="md:w-1/2">
+                    <h2 className="text-4xl md:text-5xl font-serif font-semibold leading-tight mb-6">
+                      Welcome to Paradise Properties Ceylon.
+                    </h2>
+                    <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                      Our workspaces across Colombo and other prime locations in Sri Lanka redefine what work can mean for entrepreneurs and growing businesses. At PPC, workspaces are elevated, service is premium, design is curated, and community is empowered. From refined coworking zones to customized event and meeting experiences — step into a new era of professional environments.
+                    </p>
+                    <RouterLink to="/contact" className="inline-block">
+                    <button className="bg-[#e6d5c3] text-black rounded-full px-6 py-3 hover:scale-105 transition-transform">
+                      Inquire
+                    </button>
+                    </RouterLink>
+                  </div>
+          
+                  {/* Image */}
+          <div className="md:w-1/2 w-full flex justify-center">
+            <img
+              src={victorianImg}
+              alt="Workplace"
+              className="rounded-2xl shadow-lg object-cover w-[90%] h-[300px] md:h-[400px]"
+            />
+          </div>
+          
+                </div>
+            </section>
+      
+            {/* image on right */}
+        <section className="bg-[#111111] text-white py-20 px-4 md:px-16">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            
+            {/* Image on the left */}
+            <div className="md:w-1/2 w-full flex justify-center order-1 md:order-none">
+              <img
+                src={meetingImg}
+                alt="Workplace"
+                className="rounded-2xl shadow-lg object-cover w-[90%] h-[300px] md:h-[400px]"
+              />
+            </div>
+      
+            {/* Text on the right */}
+            <div className="md:w-1/2">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold leading-tight mb-6">
+                Discover Elevated Workspaces Designed for Success
+              </h2>
+              <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                At Paradise Properties Ceylon, we craft more than just offices — we create experiences. Whether you're a startup, a growing business, or a solo entrepreneur, our thoughtfully designed spaces across Sri Lanka provide the perfect balance of comfort, creativity, and professionalism. It's more than a place to work — it's where your best ideas come to life.
+              </p>
+            </div>
+      
+          </div>
+        </section>
+
       {/* Map Section */}
       <section id="map" className="max-w-6xl mx-auto px-4 mt-16" data-aos="fade-up">
         <div className="flex items-center justify-between mb-8">

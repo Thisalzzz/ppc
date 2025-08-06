@@ -73,7 +73,7 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="py-20 px-4 md:px-8 bg-gradient-to-br from-gray-300 to-gray-900 text-gray-900">
+    <section className="py-20 px-4 md:px-8 bg-gradient-to-br from-[#0f0135] to-gray-500 text-gray-900">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -85,7 +85,7 @@ const WhyChooseUs = () => {
             Why We Stand Out
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Why Choose <span className="text-indigo-600">Our Space</span>?
+           <span className="text-indigo-600"> Why Choose </span> Our Space?
           </h2>
           <div className="w-24 h-1.5 bg-indigo-600 mx-auto rounded-full" />
         </motion.div>

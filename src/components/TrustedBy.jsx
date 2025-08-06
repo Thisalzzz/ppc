@@ -16,7 +16,7 @@ const TrustedBy = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-[#111111]">
+    <section className="py-16 bg-[#02001a]">
       <div className="max-w-7xl mx-auto px-1 text-center">
         <h2 className="text-3xl font-bold text-gray-100 mb-6">
           Trusted by Communities

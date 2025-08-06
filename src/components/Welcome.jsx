@@ -5,7 +5,7 @@ import furnished from "../assets/property-details/furnished.jpg";
 const AboutWorkClub = () => {
   const navigate = useNavigate();
   return (
-    <section className="bg-[#111111] text-white py-20 px-4 md:px-16">
+    <section className="bg-[#02001a] text-white py-20 px-4 md:px-16">
       <div
         className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12"
         data-aos="fade-up"

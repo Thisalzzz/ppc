@@ -18,6 +18,7 @@ import WhyChooseUs from "../components/WhyChooseUs.jsx";
 import AboutWorkClub from "../components/Welcome.jsx";
 import Footer from "../components/Footer.jsx";
 import PromotionModal from "../components/PromotionalModal.jsx";
+import WhyWeStandOut from "../components/WhyWeStand.jsx";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -56,7 +57,7 @@ const Home = () => {
       <TrustedBy />
 
       {/* Property Cards Section */}
-      <section className="px-8 py-16 bg-gradient-to-br from-gray-300 to-gray-900">
+      <section className="px-8 py-16 bg-gradient-to-br  from-[#0f0135] to-gray-500">
         <h2 className="text-4xl text-gray-100 font-bold text-center mb-12">
           Our locations
         </h2>
@@ -64,7 +65,7 @@ const Home = () => {
           <div data-aos="fade-up">
             <PropertyCard
               title="Paradise Properties Ceylon"
-              location="Rajagiriya"
+              location="Nawala"
               image={rajagiriyaImg}
               onExplore={() => navigate("/property/ceylon")}
             />
@@ -82,7 +83,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      <WhyWeStandOut />
       <FeaturesSection />
       <FeaturesHome />
       <TestimonialVideosSection />

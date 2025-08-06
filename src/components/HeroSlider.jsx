@@ -78,7 +78,7 @@ const HeroSlider = () => {
         
         {/* Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/100 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-950 to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.8)_100%)]" />
       </div>
 

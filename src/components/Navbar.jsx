@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-gradient-to-r from-blue-900 to-black border-b border-gray-800 shadow-xl">
+    <header className="fixed top-0 left-0 w-screen z-50 backdrop-blur-lg bg-gradient-to-r from-blue-900 to-black border-b border-gray-800 shadow-xl">
       <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
         {/* Logo with drop animation */}
         <div

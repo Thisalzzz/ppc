@@ -6,7 +6,7 @@ const PropertyCard = ({ title, location, image, onExplore }) => {
       role="button"
       tabIndex={0}
       onClick={onExplore}
-      className="relative w-[400px] h-[500px] rounded-[30px] overflow-hidden cursor-pointer group transition duration-300 hover:shadow-xl"
+      className="relative w-auto h-[500px] rounded-[30px] overflow-hidden cursor-pointer group transition duration-300 hover:shadow-xl"
     >
       {/* Image with overlay */}
       <div className="w-full h-full overflow-hidden">

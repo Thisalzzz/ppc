@@ -52,8 +52,9 @@ const HeroSlider = () => {
   };
 
   return (
+    
     <div 
-      className="relative min-h-screen h-[90vh] w-full overflow-hidden"
+      className="bg-red-900 relative min-h-screen h-[90vh] w-full overflow-hidden"
     >
       {/* Background Images with Parallax Effect */}
       <div className="absolute inset-0 overflow-hidden">

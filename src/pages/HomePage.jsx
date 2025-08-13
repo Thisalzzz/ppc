@@ -57,12 +57,12 @@ const Home = () => {
       <TrustedBy />
 
       {/* Property Cards Section */}
-      <section className="px-8 py-16 bg-gradient-to-br  from-[#0f0135] to-gray-500">
+      <section className="px-8 py-16 bg-gradient-to-br  from-[#0f0135] to-gray-500 w-full">
         <h2 className="text-4xl text-gray-100 font-bold text-center mb-12">
           Our locations
         </h2>
         <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
-          <div data-aos="fade-up">
+          <div className="flex-1" data-aos="fade-up ">
             <PropertyCard
               title="Paradise Properties Ceylon"
               location="Nawala"
@@ -70,7 +70,7 @@ const Home = () => {
               onExplore={() => navigate("/property/ceylon")}
             />
           </div>
-          <div data-aos="fade-up" data-aos-delay="200">
+          <div className="flex-1" data-aos="fade-up" data-aos-delay="200">
             <PropertyCard
               title="Paradise Properties Luxe"
               location="Rajagiriya"
@@ -78,7 +78,7 @@ const Home = () => {
               onExplore={() => navigate("/property/luxe")}
             />
           </div>
-          <div data-aos="fade-up" data-aos-delay="200">
+          <div className="flex-1" data-aos="fade-up" data-aos-delay="200">
             <PropertyCard title="Coming Soon" image={coming} />
           </div>
         </div>

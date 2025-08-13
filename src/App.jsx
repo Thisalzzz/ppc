@@ -17,7 +17,7 @@ import ViewJobApplications from "./pages/admin/ViewApplication";
 import AdminJobsPage from './pages/admin/AdminJobsPage';
 import AboutUs from "./pages/AboutUs";
 import AdminPromotions from "./pages/admin/AdminPromotion";
-import ManagePromotion from './pages/admin/managePromotion';
+import ManagePromotion from './pages/admin/ManagePromotion';
 import SplashScreen from './components/SplashScreen'; // ⬅️ Import the splash screen
 
 export default function App() {

@@ -28,7 +28,7 @@ const AboutWorkClub = () => {
         {/* Image */}
         <div
           className="md:w-1/2 w-full flex justify-center"
-          data-aos="fade-left"
+          data-aos="fade-right"
           data-aos-delay="400"
         >
           <img

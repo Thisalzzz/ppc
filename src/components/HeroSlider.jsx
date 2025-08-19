@@ -160,27 +160,12 @@ const HeroSlider = () => {
         </div>
         
         {/* Play/Pause Button */}
-        <button
-          onClick={togglePlay}
-          className="text-white bg-black/30 backdrop-blur-sm p-2 rounded-full border border-white/10"
-          aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
-        >
-          {isPlaying ? (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
-            </svg>
-          ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-            </svg>
-          )}
-        </button>
       </div>
 
       {/* Previous/Next Buttons */}
       <button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 text-white bg-black/30 backdrop-blur-sm p-3 rounded-full border border-white/10 hover:bg-black/50 transition-all"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 text-white bg-black/30  p-3 rounded-full border border-white/10 hover:bg-black/50 transition-all"
         aria-label="Previous slide"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -190,7 +175,7 @@ const HeroSlider = () => {
       
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 text-white bg-black/30 backdrop-blur-sm p-3 rounded-full border border-white/10 hover:bg-black/50 transition-all"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 text-white bg-black/30  p-3 rounded-full border border-white/10 hover:bg-black/50 transition-all"
         aria-label="Next slide"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

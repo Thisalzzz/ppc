@@ -80,6 +80,15 @@ const AdminDashboard = () => {
             <h2 className="text-lg font-semibold text-gray-800">💼 Manage Promotions</h2>
             <p className="text-sm text-gray-500">See current available promotions</p>
           </div>
+
+
+          <div
+            onClick={() => navigate('/admin/manage-rooms')}
+            className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl cursor-pointer transition"
+          >
+            <h2 className="text-lg font-semibold text-gray-800">💼 Manage Spaces</h2>
+            <p className="text-sm text-gray-500">Add current available spaces</p>
+          </div>
         </div>
       </div>
     </div>

@@ -18,6 +18,9 @@ import AdminJobsPage from './pages/admin/AdminJobsPage';
 import AboutUs from "./pages/AboutUs";
 import AdminPromotions from "./pages/admin/AdminPromotion";
 import ManagePromotion from './pages/admin/ManagePromotion';
+import ManageRooms from './pages/admin/ManageRooms';
+import Rooms from './pages/spaces/Rooms';
+import Meeting from './pages/Meeting';
 import SplashScreen from './components/SplashScreen'; // ⬅️ Import the splash screen
 
 export default function App() {
@@ -54,6 +57,9 @@ export default function App() {
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/admin/promotions" element={<AdminPromotions />} />
             <Route path="/admin/manage-promotion" element={<ManagePromotion />} />
+            <Route path="/admin/manage-rooms" element={<ManageRooms />} />
+            <Route path="/meeting" element={<Meeting />} />
+            <Route path="/spaces" element={<Rooms />} />
           </Routes>
 
           {/* Floating Buttons */}

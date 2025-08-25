@@ -51,7 +51,7 @@ const FeaturesHome = () => {
         }
       `}</style>
 
-      <h2 className="text-4xl text-white font-mono text-center mb-12">
+      <h2 className="text-5xl text-white font-bold  text-center mb-12">
         Our Main Services
       </h2>
 

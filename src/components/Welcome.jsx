@@ -19,9 +19,9 @@ const AboutWorkClub = () => {
             Our workspaces across Colombo and other prime locations in Sri Lanka redefine what work can mean for entrepreneurs and growing businesses. At PPC, workspaces are elevated, service is premium, design is curated, and community is empowered. From refined coworking zones to customized event and meeting experiences — step into a new era of professional environments.
           </p>
           <button className="bg-[#e6d5c3] text-black rounded-full px-6 py-3 hover:scale-105 transition-transform cursor-pointer"
-            onClick={() => navigate("/contact")}
+            onClick={() => navigate("/spaces")}
           >
-            Inquire
+            Book a Space
           </button>
         </div>
 

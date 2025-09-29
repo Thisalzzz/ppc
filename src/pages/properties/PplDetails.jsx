@@ -126,9 +126,6 @@ const PropertyDetails = () => {
             <button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-8 py-3.5 text-lg rounded-full shadow-xl transition-all transform hover:-translate-y-0.5">
               Schedule Tour
             </button>
-            <button className="bg-transparent border-2 border-white/30 hover:border-white/50 text-white px-8 py-3.5 text-lg rounded-full shadow-xl transition-all">
-              Download Brochure
-            </button>
           </div>
         </div>
         

@@ -9,7 +9,7 @@ export default function Rooms() {
   const [isLoading, setIsLoading] = useState(true);
 
   // 🔹 Hardcoded WhatsApp number
-  const whatsappNumber = "94763603917"; // replace with your number without '+'
+  const whatsappNumber = "94707845444"; // replace with your number without '+'
 
   useEffect(() => {
     const fetchRooms = async () => {

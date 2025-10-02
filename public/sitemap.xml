@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://paradiseproperties.lk/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://paradiseproperties.lk/about-us</loc>
+    <priority>0.8</priority>
+  </url>
+
+
+  <!-- Properties / Co-working Spaces -->
+  <url>
+    <loc>https://paradiseproperties.lk/property/ceylon</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paradiseproperties.lk/property/luxe</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://paradiseproperties.lk/contact</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Spaces -->
+  <url>
+    <loc>https://paradiseproperties.lk/spaces</loc>
+    <priority>0.7</priority>
+  </url>
+
+<!-- Meeting -->
+  <url>
+    <loc>https://paradiseproperties.lk/meeting</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Careers -->
+  <url>
+    <loc>https://paradiseproperties.lk/careers</loc>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

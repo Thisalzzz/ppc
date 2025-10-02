@@ -90,7 +90,7 @@ const MeetingRooms = () => {
             </div>
             
             <PopupButton
-              url="https://calendly.com/wasanthaakurugoda/30min"
+              url="https://calendly.com/wasanthaakurugoda/new-meeting"
               rootElement={document.getElementById("root")}
               text="Book This Room"
               className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"

@@ -11,6 +11,7 @@ import HeroSlider from "../components/HeroSlider";
 import rajagiriyaImg from "../assets/property-details/victorian.jpg";
 import luxeImg from "../assets/property-details/lobby2.jpg";
 import coming from "../assets/properties/coming.png";
+import havelock from "../assets/properties/havelock.jpeg";
 import FeaturesSection from "../components/FeaturesSection";
 import FeaturesHome from "../components/FeaturesHome.jsx";
 import TestimonialVideosSection from "../components/TestimonialVideosSection.jsx";
@@ -79,7 +80,7 @@ const Home = () => {
             />
           </div>
           <div className="flex-1" data-aos="fade-up" data-aos-delay="200">
-            <PropertyCard title="Coming Soon" image={coming} />
+            <PropertyCard title="Scheduled to open on December 10th!" image={havelock} />
           </div>
         </div>
       </section>

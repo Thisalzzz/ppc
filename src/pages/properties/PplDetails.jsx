@@ -263,7 +263,7 @@ const PropertyDetails = () => {
         <div className="rounded-2xl overflow-hidden shadow-2xl h-[400px] border border-gray-800">
           <iframe
             title="Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8665006920296!2d79.9002958!3d6.9065629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596a5c4d8f69%3A0xb6629dd71fc7d6b1!2sLuxe%20Colombo%20Head%20Office%20-%20Rajagiriya!5e0!3m2!1sen!2slk!4v1753346941494!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8660075366515!2d79.89775377475688!3d6.906621793092775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2590007113f7b%3A0xa0ca0f4d747bc777!2sParadise%20Properties%20LUXE!5e0!3m2!1sen!2slk!4v1763356363329!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             width="100%"
             height="100%"
             style={{ border: 0 }}

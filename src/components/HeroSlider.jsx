@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import Snowfall from 'react-snowfall'; // Added import for snowfall
 import one from "../assets/hero/1.jpg";
 import two from "../assets/properties/rajagiriya.jpg";
 import three from "../assets/property-details/furnished.jpg";
@@ -52,10 +53,7 @@ const HeroSlider = () => {
   };
 
   return (
-    
-    <div 
-      className="bg-red-900 relative min-h-screen h-[90vh] w-full overflow-hidden"
-    >
+    <div className="bg-red-900 relative min-h-screen h-[90vh] w-full overflow-hidden">
       {/* Background Images with Parallax Effect */}
       <div className="absolute inset-0 overflow-hidden">
         {images.map((img, i) => (
@@ -81,6 +79,22 @@ const HeroSlider = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-950 to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.8)_100%)]" />
+        
+        {/* Christmas Snowfall Effect */}
+        <Snowfall
+          color="#ffffff"
+          snowflakeCount={120}
+          speed={[0.5, 2.5]}
+          wind={[-0.2, 0.3]}
+          radius={[0.5, 3.0]}
+          style={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            pointerEvents: 'none',
+            zIndex: 1
+          }}
+        />
       </div>
 
       {/* Text Content */}
@@ -184,9 +198,8 @@ const HeroSlider = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
-
     </div>
   );
 };
 
-export default HeroSlider;
+export default HeroSlider; 

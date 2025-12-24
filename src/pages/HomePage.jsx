@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Snowfall from 'react-snowfall'; // Added snowfall import
 
 import PropertyCard from "../components/PropertyCard";
 import Navbar from "../components/Navbar";
@@ -30,7 +31,24 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen relative">
+      {/* Global Snowfall for the entire homepage */}
+      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+        <Snowfall
+          color="#ffffff"
+          snowflakeCount={200}
+          speed={[0.5, 3]}
+          wind={[-0.5, 0.5]}
+          radius={[0.5, 4.0]}
+          style={{
+            position: 'fixed',
+            width: '100%',
+            height: '100%',
+            pointerEvents: 'none'
+          }}
+        />
+      </div>
+
       {/* SEO Meta Tags */}
       <Helmet>
         <title>Paradise Properties - Coworking Spaces in Rajagiriya</title>
